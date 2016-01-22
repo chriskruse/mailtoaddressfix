@@ -63,7 +63,10 @@ class MailToAddressFix {
 
 		}
 
-		__dd($to);
+		//save filtered addresses and return
+		$data['to'] = $to;
+		return $data;
 	}
 
 }
+
