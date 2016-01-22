@@ -11,11 +11,13 @@ License:     GPLv3
 
 class MailToAddressFix {
 
+	//add filter
 	public static function init() 
 	{
 		add_filter('wp_mail', array('MailToAddressFix', 'fix_to_address'));
 	}
 
+	//filter to addresses
 	public static function fix_to_address( $data ) 
 	{
 		$to = $data['to'];
@@ -69,4 +71,7 @@ class MailToAddressFix {
 	}
 
 }
+
+//init
+MailToAddressFix::init();
 
